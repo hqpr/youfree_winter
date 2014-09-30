@@ -1,0 +1,768 @@
+html,body { margin:0; padding:0 }
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/PTSans/PTS55F_W.eot?#iefix");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/PTSans/PTS55F_W.woff") format("woff"),
+	url("/fonts/PTSans/PTS55F_W.ttf") format("truetype"),
+	url("/fonts/PTSans/PTS55F_W.svg") format("svg");
+}
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/PTSansNarrow/PTN57F_W.eot?#iefix");
+}
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/PTSansNarrow/PTN57F_W.woff") format("woff"),
+	url("/fonts/PTSansNarrow/PTN57F_W.ttf") format("truetype"),
+	url("/fonts/PTSansNarrow/PTN57F_W.svg") format("svg");
+}
+
+
+@font-face {
+    font-family: "PT Sans Narrow Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/PTSansNarrow/PTN77F_W.eot?#iefix");
+}
+
+@font-face {
+    font-family: "PT Sans Narrow Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/PTSansNarrow/PTN77F_W.woff") format("woff"),
+	url("/fonts/PTSansNarrow/PTN77F_W.ttf") format("truetype"),
+	url("/fonts/PTSansNarrow/PTN77F_W.svg") format("svg");
+}
+
+a img {border:none;}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("/images/bg.jpg") no-repeat top center;
+}
+
+.wrapper {
+    width: 1282px;
+    height: 793px;
+    margin: 0 auto;
+    margin-top: 44px;
+}
+
+.top {
+    height: 56px;
+    width: 100%;
+}
+
+.logo {
+    width: 430px;
+    height: 56px;
+    background: url("");
+    margin-left: 143px;
+    float: left;
+}
+
+.buttons {
+    width: 335px;
+    float: left;
+    height: 51px;
+    margin-left: 239px;
+}
+    #register {
+        width: 187px;
+        height: 51px;
+        float: left;
+        overflow: hidden;
+        display: block;
+    }
+
+        #register :hover img{
+            background: url("/images/register.png");
+            margin-top: -51px;
+        }
+
+    #game {
+        width: 126px;
+        height: 51px;
+        float: left;
+        margin-left: 21px;
+        overflow: hidden;
+        display: block;
+    }
+            #game :hover img{
+            background: url("/images/game.png");
+            margin-top: -51px;
+    }
+
+.slider {
+    width: 1282px;
+    height: 577px;
+    margin-top: 44px;
+    -webkit-box-shadow: 0 0 15px #000;
+    -moz-box-shadow: 0 0 15px #000;
+    box-shadow: 0 0 15px #000;
+}
+
+    .nivoSlider {
+        position:relative;
+        width:100%;
+        height:auto;
+        overflow: hidden;
+    }
+
+    .nivoSlider img {
+        position:absolute;
+        top:0px;
+        left:0px;
+        max-width: none;
+    }
+    .nivo-main-image {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+    }
+
+    /* If an image is wrapped in a link */
+    .nivoSlider a.nivo-imageLink {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        border:0;
+        padding:0;
+        margin:0;
+        z-index:6;
+        display:none;
+        background:white;
+        filter:alpha(opacity=0);
+        opacity:0;
+    }
+    /* The slices and boxes in the Slider */
+    .nivo-slice {
+        display:block;
+        position:absolute;
+        z-index:5;
+        height:100%;
+        top:0;
+    }
+    .nivo-box {
+        display:block;
+        position:absolute;
+        z-index:5;
+        overflow:hidden;
+    }
+    .nivo-box img { display:block; }
+
+    /* Caption styles */
+    .nivo-caption {
+        position:absolute;
+        left:0px;
+        bottom:0px;
+        background:#000;
+        color:#fff;
+        width:100%;
+        z-index:8;
+        padding: 5px 10px;
+        opacity: 0.8;
+        overflow: hidden;
+        display: none;
+        -moz-opacity: 0.8;
+        filter:alpha(opacity=8);
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+    .nivo-caption p {
+        padding:5px;
+        margin:0;
+    }
+    .nivo-caption a {
+        display:inline !important;
+    }
+    .nivo-html-caption {
+        display:none;
+    }
+    /* Direction nav styles (e.g. Next & Prev) */
+    .nivo-directionNav a {
+        position:absolute;
+        top:45%;
+        z-index:9;
+        cursor:pointer;
+    }
+    .nivo-prevNav {
+        left:141px;
+        background: url("/images/left.png");
+        height: 74px;
+        width: 29px;
+    }
+    .nivo-nextNav {
+        right:141px;
+        background: url("/images/right.png");
+        height: 74px;
+        width: 35px;
+    }
+    /* Control nav styles (e.g. 1,2,3...) */
+    .nivo-controlNav {
+        text-align:center;
+        padding: 15px 0;
+    }
+    .nivo-controlNav a {
+        cursor:pointer;
+    }
+    .nivo-controlNav a.active {
+        font-weight:bold;
+    }
+.toisland {
+    width: 441px;
+    height: 93px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+    .toisland :hover img {
+        background: url("/images/toisland.png");
+        margin-top: -93px;
+    }
+
+.content {
+    width: 1282px;
+    height: 656px;
+    background: url("/images/frame.jpg");
+    margin-top: 44px;
+}
+    .tabs {
+        width: 999px;
+        height: 137px;
+        margin: 0 auto;
+    }
+
+        #active {
+            float: left;
+            width: 333px;
+            height: 137px;
+        }
+
+        .not {
+            float: left;
+            width: 332px;
+            height: 87px;
+        }
+
+        .description {
+            margin: 0 auto;
+            width: 1003px;
+            height: 390px;
+            overflow-x: hidden;
+            outline: none;
+            margin-top: 30px;
+
+        }
+        .description p {
+            font-family: "PT Sans Narrow";
+            font-size: 26px;
+            color: #0d367c;
+            margin-top: -7px;
+        }
+
+    .back {
+        width: 290px;
+        height: 69px;
+        display: block;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+        .back :hover img {
+            background: url("/images/back.png");
+            margin-top: -69px;
+        }
+
+.game_content {
+    width: 1282px;
+    height: 656px;
+    background: url("/images/bg_game.jpg");
+    margin-top: 44px;
+}
+
+    .game_col {
+        width: 726px;
+        height: 656px;
+        float: right;
+        color: #ffffff;
+    }
+    .game_col h1 {
+        font-family: "PT Sans Narrow";
+        font-size: 36px;
+        text-transform: uppercase;
+        margin-top: 150px;
+        width: 430px;
+        font-weight: lighter;
+    }
+
+    .game_col p {
+        font-size: 26px;
+        margin-top: 80px;
+        width: 333px;
+        margin-left: 60px;
+        font-family: "PT Sans Narrow";
+        font-weight: lighter;
+    }
+
+
+        #play {
+        width: 274px;
+        height: 78px;
+        overflow: hidden;
+        display: block;
+        margin: 60px 0  0 90px;
+    }
+            #play :hover img{
+            background: url("/images/play.png");
+            margin-top: -78px;
+            }
+
+.quiz {
+    width: 1282px;
+    height: 657px;
+    background: url("/images/bg_quiz.jpg");
+    margin-top: 44px;
+    font-family: "PT Sans Narrow";
+}
+
+
+    .one {
+        background: url("/images/bg_quiz1.jpg");
+    }
+    .two {
+        background: url("/images/bg_quiz2.jpg");
+    }
+    .three {
+        background: url("/images/bg_quiz3.jpg");
+    }
+    .four {
+        background: url("/images/bg_quiz4.jpg");
+    }
+    .five {
+        background: url("/images/bg_quiz5.jpg");
+    }
+    .six {
+        background: url("/images/bg_quiz6.jpg");
+    }
+
+
+
+    .number {
+        width: 139px;
+        height: 196px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 136px;
+        margin-left: 417px;
+        position: relative;
+        top: 130px;
+    }
+
+    .question {
+        width: 520px;
+        height: 196px;
+        color: #ffffff;
+        font-size: 34px;
+        position: relative;
+        left: 600px;
+        top: -37px;
+    }
+
+    .answers {
+        width: 727px;
+        height: 227px;
+        position: relative;
+        left: 557px;
+        color: #0d367c;
+        font-size: 30px;
+        line-height: 45px;
+        top: -25px;
+        z-index: 9;
+    }
+        #answer1 {
+            width: 331px;
+            height: 51px;
+            background: url("/images/answer.png");
+            margin-bottom: 25px;
+            cursor: pointer;
+            padding-left: 15px;
+        }
+        #answer2 {
+            width: 331px;
+            height: 51px;
+            background: url("/images/answer.png");
+            margin-bottom: 25px;
+            cursor: pointer;
+            padding-left: 15px;
+        }
+        #answer3 {
+            width: 331px;
+            height: 51px;
+            background: url("/images/answer.png");
+            cursor: pointer;
+            padding-left: 15px;
+        }
+        /*#answer4 {*/
+            /*width: 331px;*/
+            /*height: 51px;*/
+            /*background: url("/images/answer.png");*/
+            /*cursor: pointer;*/
+            /*position: relative;*/
+            /*bottom: 51px;*/
+            /*left: 382px;*/
+            /*padding-left: 15px;*/
+        /*}*/
+
+        .selected {
+            width: 331px;
+            height: 51px;
+            color: #ffffff;
+            background: url("/images/selected.png") !important;
+            padding-left: 15px;
+        }
+
+        .confirm {
+            width: 212px;
+            height: 58px;
+            display: block;
+            overflow: hidden;
+            margin-left: 923px;
+            margin-top: -103px;
+            visibility: hidden;
+            position: absolute;
+            z-index: 10;
+    }
+
+            .confirm :hover img {
+                background: url("/images/confirm.png");
+                margin-top: -58px;
+            }
+
+        .correct {
+            background: url("/images/correct.png") !important;
+            color: #ffffff;
+        }
+
+        .wrong {
+            background: url("/images/wrong.png") !important;
+            color: #ffffff;
+        }
+
+        .correct_was{
+            background: url("/images/answer_correct.png") !important;
+        }
+            .next {
+                width: 202px;
+                height: 58px;
+                display: block;
+                position: absolute;
+                overflow: hidden;
+                margin-left: 923px;
+                margin-top: -103px;
+                visibility: hidden;
+                z-index: 10;
+    }
+
+            .next :hover img {
+                background: url("/images/next.png");
+                margin-top: -58px;
+            }
+
+        .res {
+            font-size: 38px;
+            text-align: center;
+            line-height: 130px;
+            margin-left: -20px;
+        }
+
+.results {
+    width: 1282px;
+    height: 656px;
+    background: url("/images/bg_results.jpg");
+    margin-top: 44px;
+    font-family: "PT Sans Narrow";
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+}
+ .points {
+     width: 600px;
+     height: 150px;
+     margin-left: 480px;
+     position: relative;
+     top: 130px;
+     text-transform: uppercase;
+     padding-top: 30px;
+ }
+
+ .slogan{
+    width: 600px;
+    height: 285px;
+    margin-left: 480px;
+    position: relative;
+    top: 130px;
+     font-size: 32px;
+ }
+
+    .reg {
+        width: 290px;
+        height: 69px;
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        margin-left: 637px;
+        /*margin-top: 15px;*/
+        /*visibility: hidden;*/
+}
+
+    .reg :hover img {
+        background: url("/images/reg_button.png");
+        margin-top: -69px;
+    }
+
+/* Popup */
+/*
+	author: istockphp.com
+*/
+#backgroundPopup {
+	z-index:1;
+	position: fixed;
+	display:none;
+	height:100%;
+	width:100%;
+	background:#000000;
+	top:0px;
+	left:0px;
+}
+.toPopup {
+    font-family: "PT Sans Narrow";
+    background: url("/images/bg_reg.png");
+    color: #333333;
+    display: none;
+	font-size: 14px;
+    left: 45%;
+    margin-left: -402px;
+    position: absolute;
+    top: 10%;
+    width: 985px;
+    height: 668px;
+    z-index: 10;
+}
+div.loader {
+    background: url("/images/loading.gif") no-repeat scroll 0 0 transparent;
+    width: 300px;
+    height: 300px;
+	display: none;
+	z-index: 9999;
+	top: 30%;
+	left: 45%;
+	position: absolute;
+	margin-left: -10px;
+}
+div.close {
+    background: url("/images/closebox.png") no-repeat scroll 0 0 transparent;
+    bottom: -16px;
+    cursor: pointer;
+    float: right;
+    width: 27px;
+    height: 26px;
+    left: -13px;
+    position: relative;
+}
+span.ecs_tooltip {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: none;
+    font-size: 11px;
+    height: 16px;
+    opacity: 0.7;
+    padding: 4px 3px 2px 5px;
+    position: absolute;
+    right: -52px;
+    text-align: center;
+    top: -41px;
+    width: 93px;
+}
+span.arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #000000;
+    display: block;
+    height: 1px;
+    left: 40px;
+    position: relative;
+    top: 3px;
+    width: 1px;
+}
+div#popup_content {
+    margin: 4px 7px;
+}
+
+/* registration form */
+input[type=text]
+{
+    padding-left: 10px;
+    text-decoration: none;
+    /*background-image: url('/images/input.png');*/
+    /*background-repeat: repeat-x;*/
+    font-family: "PT Sans Narrow";
+    border: 0;
+    width: 365px;
+    height: 57px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 365px;
+    border: 0 !important;
+    height: 57px;
+    font-size: 28px;
+    font-family: "PT Sans Narrow";
+    /*line-height: 40px;*/
+    background: url("/images/dropdown.png") no-repeat right center white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: "";
+    color: #162c69;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+/*select label:after {*/
+    /*content: '';*/
+    /*width: 23px;*/
+    /*height: 23px;*/
+    /*position: absolute;*/
+    /*display: inline-block;*/
+    /*top: 4px;*/
+    /*right: 4px;*/
+    /*background: url(http://www.stackoverflow.com/favicon.ico) no-repeat right center white;*/
+/*}*/
+
+.left_col {
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-top: 130px;
+    font-family: "PT Sans Narrow";
+    color: white;
+    font-size: 24px;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.right_col {
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-top: 130px;
+    font-family: "PT Sans Narrow";
+    color: white;
+    font-size: 24px;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.policy {
+
+    color: #1673c5;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1px;
+    text-transform: uppercase;
+
+}
+
+.tosite {
+    width: 202px;
+    height: 58px;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin-left: 387px;
+    margin-top: 590px;
+}
+
+.tosite :hover img {
+    background: url("/images/next.png");
+    margin-top: -58px;
+}
+
+
+.input-radio {
+  display: block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+    margin-top: 20px;
+}
+.input-radio input {
+  width: 24px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+.input-radio label {
+  display: inline-block;
+  padding-left: 25px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.input-radio label:before {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 15%;
+  width: 24px;
+  height: 22px;
+  background: rgba(0, 0, 0, 0) url(/images/check_radio_sheet.png) 2px no-repeat;
+  z-index: 5;
+  content: '';
+}
+.input-radio input:checked + label:before {
+  background-position: -24px 0;}
+
+
+.warning{
+    color: red;
+    position: absolute;
+    bottom: 150px;
+    left: 20px;
+}
